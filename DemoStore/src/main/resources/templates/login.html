@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Welcome Provision Production</title>
+<style type="text/css">
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+#header{
+	font-size: 50px;
+	text-align: center;
+}
+
+#medium {
+	font-size: 30px;
+	text-align: center;
+	display: block;
+	
+	text-align: center;
+	margin-top: 3%;
+}
+
+#loginForm{
+	background: violet;
+	border: solid;
+	border-width:2px;
+	border-color: yellow;
+	border-radius: 10px;
+	width: 800px;
+	margin: auto;
+}
+#loginForm input{
+	font-size: 30px;
+	line-height: 30px;
+}
+</style>
+</head>
+<body>
+<div id="header">
+<h1 th:text="${loginTitle}">Welcome Title</h1>
+</div>
+<div id="medium">
+	<form id="loginForm" th:action="@{/login.do}" method="post" >
+		<label th:text="${username}">User ID</label><input name="userid" type="text" placeholder="userid"><br/>
+		<label th:text="${pwd}">Password</label><input name="pwd" type="password" placeholder="password"><br/>
+		<input type="submit" th:value="${loginBtn}">
+	</form>
+	<p th:text="${copyRight}">copy right</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>OrderList Form</title>
+</head>
+<body>
+<form id="loginForm" th:action="@{/putOrderList.do}" method="post" >
+<label>User No</label><input type="text" name="userNo" placeholder="userNo"><br/>
+<label>Item No</label><input type="text" name="itemNo" placeholder="itemNo"><br/>
+<label>Count</label><input type="text" name="count" placeholder="count"><br/>
+<input type="submit" th:value="submit">
+</form>
+</body>
+</html>
